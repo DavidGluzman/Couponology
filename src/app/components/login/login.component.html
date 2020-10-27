@@ -1,0 +1,29 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-tab-group animationDuration="0ms" (selectedTabChange)="changeClientType($event)">
+        <mat-tab label="Customer" ></mat-tab>
+         <mat-tab label="Company" ></mat-tab>
+          <mat-tab label="Admin" ></mat-tab>
+       </mat-tab-group>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="email" [(ngModel)]="emailPassModel.email" name="email">
+        </mat-form-field>
+<br>
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="password" [(ngModel)]="emailPassModel.password" name="password">
+        </mat-form-field>
+      </form>
+
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="loginToServer()">login</button>
+    </mat-card-actions>
+    <br>
+  </mat-card>

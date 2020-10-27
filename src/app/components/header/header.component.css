@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
+
+
+mat-toolbar{
+    font-family: 'Lobster', cursive;
+    font-size: xx-large;
+    color: whitesmoke;  
+}
+
+
+button{
+    position: absolute;
+    right: 10px;
+    
+    
+}

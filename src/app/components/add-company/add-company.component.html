@@ -1,0 +1,28 @@
+
+
+<h1>
+    Add Company
+</h1>
+<br>
+<p>
+    <mat-form-field appearance="outline" >
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="name" required=true type="text">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="email" required=true type="email">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput [(ngModel)]="password" required=true type="password">
+    </mat-form-field>
+  </p>
+  <p>
+      
+    <button mat-raised-button color="primary" (click)="addCompany()">add Company</button>
+  </p>

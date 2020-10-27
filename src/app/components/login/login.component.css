@@ -1,0 +1,20 @@
+.example-card {
+    width:  550px;
+    position: relative;
+  }
+ 
+  .mat-tab-group {
+    margin-bottom: 48px;
+  }
+  mat-card-actions{
+    position: relative;
+    margin-left: 45%;
+  }
+  mat-card-content{
+    position: relative;
+    margin-left: 35%;
+    
+  }
+  mat-form-field{
+    width: fit-content;
+  }
