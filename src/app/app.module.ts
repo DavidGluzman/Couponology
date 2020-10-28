@@ -25,9 +25,12 @@ import { from } from 'rxjs';
 import { AdminComponent } from './components/admin/admin.component';
 import { AddCompanyComponent } from './components/add-company/add-company.component';
 import { AddCustomerComponent } from './components/add-customer/add-customer.component';
+import { UpdateCustomerComponent } from './components/update-customer/update-customer.component';
+
+
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, BodyComponent, ToolbarComponent, LoginComponent, AdminComponent, AddCompanyComponent, AddCustomerComponent],
+  declarations: [LayoutComponent, HeaderComponent, BodyComponent, ToolbarComponent, LoginComponent, AdminComponent, AddCompanyComponent, AddCustomerComponent, UpdateCustomerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -22,7 +22,11 @@
       <input matInput [(ngModel)]="password" required=true type="password">
     </mat-form-field>
   </p>
-  <p>
-      
-    <button mat-raised-button color="primary" (click)="addCompany()">add Company</button>
-  </p>
+  
+      <div>
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button mat-button [mat-dialog-close]="true"  (click)="addCompany()" cdkFocusInitial>add</button>
+    </mat-dialog-actions>
+  </div>
+  

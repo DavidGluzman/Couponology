@@ -1,8 +1,9 @@
 export class Coupon {
    
     public constructor(
-        public name:string,
-        public age:number
+        public id?:number,
+        public name?:string,
+        public age?:number
     ) {}
 
   }

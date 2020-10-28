@@ -8,6 +8,7 @@ import {AdminService} from '../../services/admin.service';
 import { MatDialog } from '@angular/material/dialog';
 import { AddCompanyComponent } from '../add-company/add-company.component';
 import { AddCustomerComponent } from '../add-customer/add-customer.component';
+import {UpdateCustomerComponent} from '../update-customer/update-customer.component';
 
 @Component({
   selector: 'app-admin',
@@ -17,11 +18,11 @@ import { AddCustomerComponent } from '../add-customer/add-customer.component';
 export class AdminComponent implements OnInit {
     
 companies:Company[]=[];
-    displayedColumnsCompany: string[] = ['id', 'name', 'email', 'password'];
+    displayedColumnsCompany: string[] = ['id', 'name', 'email', 'password','options'];
     dataSourceCompany = new MatTableDataSource(this.companies);
 
     customers:Customer[]=[];
-    displayedColumnsCustomer: string[] = ['id', 'firstName','lastName', 'email', 'password'];
+    displayedColumnsCustomer: string[] = ['id', 'firstName','lastName', 'email', 'password','options'];
     dataSourceCustomer = new MatTableDataSource(this.customers);
   
     applyFilterCompany(event: Event) {
@@ -34,17 +35,47 @@ companies:Company[]=[];
     }
 
   
-  constructor(private adminService:AdminService,public dialog: MatDialog) {
+  constructor(private adminService:AdminService,private dialog: MatDialog) {
   
 
 
    }
 addCompany(): void{
-    this.dialog.open(AddCompanyComponent);
+  const dialogRef = this.dialog.open(AddCompanyComponent);
+  dialogRef.afterClosed().subscribe(result => {
+    console.log(result);
+    
+    if(result) this.ngOnInit();
+    else alert("aaa")
+  });
 }
-addCustomer():void{
-  this.dialog.open(AddCustomerComponent);
+
+
+
+
+addCustomer(): void{
+  const dialogRef = this.dialog.open(AddCustomerComponent);
+  dialogRef.afterClosed().subscribe(result => {
+    console.log(result);
+    
+    if(result) this.ngOnInit();
+    else alert("aaa")
+  });
 }
+updateCustomer(): void{
+  const dialogRef = this.dialog.open(UpdateCustomerComponent);
+  dialogRef.afterClosed().subscribe(result=>{
+    console.log(result);
+    
+    if(result) this.ngOnInit();
+    else alert("aaa")
+  });
+}
+
+
+
+
+
   ngOnInit(): void {
  this.adminService.getCompanies().subscribe(
      (res)=>{console.log(res);
